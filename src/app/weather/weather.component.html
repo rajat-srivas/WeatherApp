@@ -1,0 +1,22 @@
+<div class="mainDiv">
+    <div class="content">
+        <div class="myForm">
+            <form #form="ngForm">
+                <input type="text" placeholder="City" name="cityName" #cityName="ngModel" [(ngModel)]="city">
+                <button (click)="getWeather()">Get Weather</button>
+            </form>
+        </div>
+
+
+        <div class="weather">
+            <h1 class="city">{{this.weather.city}}</h1>
+            <img [src]="'../../assets/animated/' + this.weather.iconName" alt="">
+            <h2 class="temp">{{this.weather.temp}}&deg;</h2>
+            <h3 class="maxmin">{{this.weather.max}}&deg; &nbsp; {{this.weather.min}}&deg;</h3>
+            <h3 class="desc">{{this.weather.desc}}</h3>
+            <h3 class="desc"> {{this.weather.humidity}}% Humidity</h3>
+        </div>
+
+    </div>
+
+</div>
